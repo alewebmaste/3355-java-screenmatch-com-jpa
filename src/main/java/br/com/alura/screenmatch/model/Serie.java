@@ -32,7 +32,9 @@ public class Serie {
 
     public Serie(DadosSerie dadosSerie) {
         this.titulo = dadosSerie.titulo();
-        this.genero = Categoria.fromPortugues(dadosSerie.genero().split(",")[0]);
+        //Usado apenas quando recebe o argumento em portugues
+        //this.genero = Categoria.fromPortugues(dadosSerie.genero().split(",")[0]);
+        this.genero = Categoria.fromString(dadosSerie.genero().split(",")[0]);
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
         //chatgtp com problema de assinatura
